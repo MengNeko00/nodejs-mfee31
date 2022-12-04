@@ -17,7 +17,7 @@ doWork('刷牙', 3000, (err, data) => {
                 setTimeout(() => {
                     console.log(data);
                 })
-            });
+            })
         })
-    });
+    })
 });
