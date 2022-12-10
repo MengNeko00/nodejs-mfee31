@@ -13,17 +13,25 @@ const { resolve } = require("path");
 //   }
 // });
 
+
+// Promise 是一個表示非同步運算的最終完成或失敗的物件。
+// 所以要 new Promise(executor)
+// executor: function(resolve, reject) {}
 let p = new Promise((resolve, reject) => {
   fs.readFile("test.txt", "utf-8", (err, data) => {
     if (err) {
       reject(err);
     } else {
+      //  進來這裡  
       resolve(data);
+      //  console.log("成功讀到資料:", data);
     }
   });
 });
+
+//真正使用的人
 p.then((data) => {
   console.log("成功讀到資料: ", data);
-}).catch((error) => {
-  console.error("發生問題了", error);
+}).catch((err) => {
+  console.error("發生問題了", err);
 });
