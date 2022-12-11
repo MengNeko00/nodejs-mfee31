@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "cowsay": "^1.5.0",
-    "gsf-say-hello": "^1.1.2"
+    "gsf-say-hello": "^1.1.2",
+    "yosay": "^2.0.2"
   }
 }
