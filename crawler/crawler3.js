@@ -4,11 +4,13 @@
 // 2. 引用 require
 // 3. 去讀官方文件
 const axios = require("axios");
+const fs = require("fs/promises");
 
 // http://54.71.133.152:3000/stocks?stockNo=2618&date=202211
+//支援2618, 2330, 2412
 (async () => {
   try {
-    let stockNo = "2618";
+    let stockNo = await fs.readFile("getData.txt", "utf-8");
     let date = "20221211";
     let response = await axios.get("http://54.71.133.152:3000/stocks", {
       params: {
