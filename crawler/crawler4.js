@@ -9,7 +9,7 @@
 const axios = require("axios");
 // fs 是 NodeJS 內建的，所以不用特別安裝
 const fs = require("fs/promises");
-
+const mysql2 = require("mysql2/promise")
 const moment = require("moment");
 
 // http://54.71.133.152:3000/stocks?stockNo=2618&date=202211
@@ -33,3 +33,4 @@ const moment = require("moment");
     console.error(e);
   }
 })();
+
