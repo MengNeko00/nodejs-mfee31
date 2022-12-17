@@ -2,6 +2,8 @@
 // 下載 npm install (套件名稱)
 // ./node_modules/.bin/cowsay(或其他的)
 
+const { mainModule } = require("process")
+
 //------------------------------------
 
 // 為什麼要使用 Prepared Statement?
@@ -38,4 +40,11 @@
 
 // cookie -> 存在瀏覽器
 // session -> 存在server
+
+//------------------------------------
+// 如果git推上不該推的資料
+// 下2個指令
+
+// #1 git reset --soft HEAD~
+// #2 git push origin main(或其他分支) -f
 
